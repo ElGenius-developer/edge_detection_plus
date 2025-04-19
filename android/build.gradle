@@ -29,7 +29,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 33
+    compileSdk 35
     namespace 'com.sample.edgedetection'
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -44,13 +44,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility kotlin_version
+        targetCompatibility kotlin_version
     }
-    kotlinOptions { // Only if using Kotlin
-        jvmTarget = '17'
-    }
+
     buildToolsVersion '34.0.0'
+    ndkVersion '27.0.12077973'
 }
 
 dependencies {
