@@ -44,10 +44,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility kotlin_version
-        targetCompatibility kotlin_version
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
-
+    kotlinOptions {
+        jvmTarget = "17" // Match the Java version here
+    }
     buildToolsVersion '34.0.0'
     ndkVersion '27.0.12077973'
 }
